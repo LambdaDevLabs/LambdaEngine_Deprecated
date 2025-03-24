@@ -17,6 +17,12 @@ public interface IPlatformSystem {
     
     public int WindowWidth { get; protected set; }
     public int WindowHeight { get; protected set; }
+    
+    public string WindowTitle { get; set; }
+    
+    public string AppName { get; set; }
+    public string AppVersion { get; set; }
+    public string AppIdentifier { get; set; }
 
     /// <summary>
     /// Sets the size of the window.

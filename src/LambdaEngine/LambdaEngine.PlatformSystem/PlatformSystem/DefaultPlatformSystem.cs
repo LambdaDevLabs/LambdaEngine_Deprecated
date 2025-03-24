@@ -28,6 +28,14 @@ public class DefaultPlatformSystem : IPlatformSystem {
     public int WindowWidth { get; set; }
 
     public int WindowHeight { get; set; }
+    
+    public string WindowTitle { get; set; } = "My Game";
+
+    public string AppName { get; set; } = "My Game";
+
+    public string AppVersion { get; set; } = "1.0";
+
+    public string AppIdentifier { get; set; } = "com.example.my-game";
 
     public IntPtr WindowHandle {
         get => windowHandle;
@@ -45,7 +53,7 @@ public class DefaultPlatformSystem : IPlatformSystem {
     }
 
     public bool CreateWindow() {
-        SDL.SDL_SetAppMetadata("My Game", "1.0", "com.example.my-game");
+        SDL.SDL_SetAppMetadata(AppName, AppVersion, AppIdentifier);
 
         if (!SDL.SDL_Init(SDL.SDL_InitFlags.SDL_INIT_VIDEO)) {
             Debug.Log($"Couldn't initialize SDL: {SDL.SDL_GetError()}", LogLevel.FATAL);
@@ -54,7 +62,7 @@ public class DefaultPlatformSystem : IPlatformSystem {
 
         Debug.Log("SDL3 initialized.", LogLevel.INFO);
 
-        if (!SDL.SDL_CreateWindowAndRenderer("My Game", WindowWidth, WindowHeight, 0, out windowHandle,
+        if (!SDL.SDL_CreateWindowAndRenderer(WindowTitle, WindowWidth, WindowHeight, 0, out windowHandle,
                 out rendererHandle)) {
             Debug.Log($"Couldn't create window/renderer: {SDL.SDL_GetError()}", LogLevel.FATAL);
             return false;
