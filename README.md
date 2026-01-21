@@ -1,5 +1,12 @@
 # LambdaEngine
 
+## Deprecated
+This repository is deprecated and no longer maintained.
+However, i am currently working on a new version of the engine,
+which you can find here: https://github.com/LambdaDevLabs/LambdaEngine
+
+
+
 LambdaEngine is a modular 2D game engine built on SDL3. It provides a
 highly flexible architecture where core systems, such as the
 `PhysicsSystem` and `RenderSystem`, can be completely replaced with
