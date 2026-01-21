@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Reference Include="LambdaEngine">
+        <HintPath>Libs\LambdaEngine.dll</HintPath>
+      </Reference>
+      <Reference Include="LambdaEngine.AudioSystem">
+        <HintPath>Libs\LambdaEngine.AudioSystem.dll</HintPath>
+      </Reference>
+      <Reference Include="LambdaEngine.DebugSystem">
+        <HintPath>Libs\LambdaEngine.DebugSystem.dll</HintPath>
+      </Reference>
+      <Reference Include="LambdaEngine.InputSystem">
+        <HintPath>Libs\LambdaEngine.InputSystem.dll</HintPath>
+      </Reference>
+      <Reference Include="LambdaEngine.PhysicsSystem">
+        <HintPath>Libs\LambdaEngine.PhysicsSystem.dll</HintPath>
+      </Reference>
+      <Reference Include="LambdaEngine.PlatformSystem">
+        <HintPath>Libs\LambdaEngine.PlatformSystem.dll</HintPath>
+      </Reference>
+      <Reference Include="LambdaEngine.RenderSystem">
+        <HintPath>Libs\LambdaEngine.RenderSystem.dll</HintPath>
+      </Reference>
+      <Reference Include="LambdaEngine.SceneModule">
+        <HintPath>Libs\LambdaEngine.SceneModule.dll</HintPath>
+      </Reference>
+      <Reference Include="LambdaEngine.TimeSystem">
+        <HintPath>Libs\LambdaEngine.TimeSystem.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="SDL3.dll">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Assets\player.bmp">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Assets\bullet.bmp">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Assets\enemy.bmp">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+    
+</Project>
